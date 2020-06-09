@@ -5,6 +5,7 @@ import {
   GET_PROFILE,
   GET_PROFILES,
   UPDATE_PROFILE,
+  CLEAR_PROFILE,
   PROFILE_ERROR,
   ACCOUNT_DELETED,
   GET_REPOS
@@ -116,7 +117,7 @@ export const createProfile = (formData, history, edit = false) => async dispatch
 };
 
 // Create Profile
-export const addExperience = (formData, history) => async dispatch => {
+export const addExperience = (formData, history, edit = false) => async dispatch => {
   try {
     const config = {
       headers: {

@@ -54,7 +54,7 @@ const PostItem = ({
             </button>
           )}
         </Fragment>
-      })
+      )}
       </div>
     </div>
   )

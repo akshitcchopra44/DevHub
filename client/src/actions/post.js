@@ -109,7 +109,7 @@ export const addPost = formData => async dispatch => {
 
     dispatch({
       type: ADD_POST,
-      payload: id
+      payload: res.data
     })
     dispatch(setAlert('Post Created', 'success'))
   } catch(err) {
@@ -132,7 +132,7 @@ export const addComment = (postId, formData) => async dispatch => {
 
     dispatch({
       type: ADD_COMMENT,
-      payload: id
+      payload: res.data
     })
     dispatch(setAlert('Comment Added', 'success'))
   } catch(err) {
@@ -144,10 +144,9 @@ export const addComment = (postId, formData) => async dispatch => {
 }
 
 // Delete comment
-export const addComment = (postId, commentId) => async dispatch => {
-  }
+export const deleteComment = (postId, commentId) => async dispatch => {
   try {
-    const res = await axios.delete(`/api/posts/comment/${postId}/${commentId}`, formData, config);
+    const res = await axios.delete(`/api/posts/comment/${postId}/${commentId}`);
 
     dispatch({
       type: REMOVE_COMMENT,

@@ -20,7 +20,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
     instagram: ''
   });
 
-  const [dispatch, toggleSocialInputs] = useState(false);
+  const [displaySocialInputs, toggleSocialInputs] = useState(false);
 
   useEffect(() => {
     getCurrentProfile();

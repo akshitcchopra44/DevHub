@@ -10,9 +10,7 @@ const ProfileTop = ({
     social,
     user: { name, avatar }
   }
-}) => {
-  return (
-    <div className="profile-top bg-primary p-2">
+}) => (<div className="profile-top bg-primary p-2">
       <img
         className="round-img my-1"
         src={avatar}
@@ -57,11 +55,10 @@ const ProfileTop = ({
         </a>
       )}
     </div>
-  )
-}
+  </div>)
 
-ProfileTop.propTypes = {
-  profile: PropTypes.object.isRequired
-}
+  ProfileTop.propTypes = {
+    profile: PropTypes.object.isRequired
+  }
 
 export default ProfileTop;
